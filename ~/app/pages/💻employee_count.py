@@ -1,6 +1,10 @@
 import requests
 import streamlit as st
 
+st.write("Cost: 1 credit / successful request.")
+st.write("Get a number of total employees of a Company.")
+st.write("Get an employee count of this company from various sources.")
+
 api_endpoint = 'https://nubela.co/proxycurl/api/linkedin/company/employees/count/'
 api_key = st.text_input('ENTER YOUR API KEY')
 company = st.text_input('ENTER LINKEDIN COMPANY URL')
