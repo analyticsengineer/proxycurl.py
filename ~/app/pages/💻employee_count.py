@@ -1,6 +1,8 @@
 import requests
 import streamlit as st
 from PIL import Image
+from pathlib import Path
+import json
 
 image = Image.open('image2.png')
 st.image(image)
@@ -26,6 +28,22 @@ response = requests.get(api_endpoint,
                         headers=header_dic)
 
 st.write(response.json)
+
+if st.button('Convert To Csv File'):
+    jsonpath = Path('resonse.json')
+    with jsonpath.open('r', encoding='utf-8') as dat_f:
+         dat = json.loads(dat_f.read())
+    df = pd.json_normalize(dat)
+    df.to_csv('datafile.csv', encoding='utf-8', index=False)
+    df = pd.DataFrame(df)
+    file_name = "employee_end_point.csv"
+    file_path = f"./{file_name}"
+    df = open(file_path, 'rb')
+    st.download_button(label='Click to download',
+                      data=df,
+                      file_name=file_name,
+                      key='download_df')
+
 
 
 
