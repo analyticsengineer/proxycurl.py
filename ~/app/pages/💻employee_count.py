@@ -30,8 +30,9 @@ if st.button('Get Data'):
                         headers=header_dic)
 
     st.write(response.json)
+    
     jsonFile = open("response.json", "w")
-    jsonFile.write(jsonString)
+    #jsonFile.write(jsonString)
     jsonFile.close()
 
     if st.button('Convert To Csv File'):
