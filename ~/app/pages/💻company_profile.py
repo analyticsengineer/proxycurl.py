@@ -30,6 +30,6 @@ if st.button('Get Data'):
       btn = st.download_button(
             label="Download image",
             data=file,
-            file_name="flower.png",
+            file_name="profile_image.png",
             mime="image/png"
           )
