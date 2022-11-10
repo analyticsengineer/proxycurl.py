@@ -1,5 +1,8 @@
 import requests
 import streamlit as st
+from PIL import Image
+
+image = Image.open('image2.png')
 
 st.write("Cost: 1 credit / successful request.")
 st.write("Get a number of total employees of a Company.")
