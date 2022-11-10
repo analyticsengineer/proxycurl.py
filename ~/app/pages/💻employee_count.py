@@ -30,13 +30,15 @@ if st.button('Get Data'):
                         headers=header_dic)
 
     st.write(response.json)
+    jsonFile = open("response.json", "w")
+    jsonFile.write(jsonString)
+    jsonFile.close()
 
     if st.button('Convert To Csv File'):
-        jsonpath = Path('resonse.json')
-        with jsonpath.open('r', encoding='utf-8') as dat_f:
-            dat = json.loads(dat_f.read())
-            df = pd.json_normalize(dat)
-            df.to_csv('datafile.csv', encoding='utf-8', index=False)
+        with open('response.json', 'r') as f:
+            data = json.load(f)
+            df = pd.json_normalize(data)
+            df.to_csv('net_info.csv', encoding='utf-8', index=False)
             df = pd.DataFrame(df)
             file_name = "employee_end_point.csv"
             file_path = f"./{file_name}"
