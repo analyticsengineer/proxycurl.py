@@ -39,7 +39,7 @@ if st.button('Get Data'):
         with open('response.json', 'r') as f:
             data = json.load(f)
             df = pd.json_normalize(data)
-            df.to_csv('net_info.csv', encoding='utf-8', index=False)
+            df.to_csv('employee_end_point.csv', encoding='utf-8', index=False)
             df = pd.DataFrame(df)
             file_name = "employee_end_point.csv"
             file_path = f"./{file_name}"
