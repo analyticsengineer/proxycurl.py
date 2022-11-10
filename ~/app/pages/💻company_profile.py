@@ -1,8 +1,6 @@
 import requests
 import streamlit as st
 from PIL import Image
-from pathlib import Path
-import json
 
 image = Image.open('image2.png')
 st.image(image)
