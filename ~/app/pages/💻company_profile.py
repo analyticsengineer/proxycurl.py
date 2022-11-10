@@ -18,7 +18,7 @@ company = st.text_input('ENTER LINKEDIN COMPANY URL')
 if st.button('Get Data'):
   header_dic = {'Authorization': 'Bearer ' + api_key}
   params = {
-     'linkedin_company_profile_url': 'https://www.linkedin.com/company/apple/',
+     'linkedin_company_profile_url': company,
   }
   response = requests.get(api_endpoint,
                         params=params,
