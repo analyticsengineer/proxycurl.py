@@ -24,9 +24,9 @@ if st.button('Get Data'):
                         params=params,
                         headers=header_dic)
 
-    st.write(response)
+  st.write(response)
     
-    with open("profile_image.png", "rb") as file:
+  with open("profile_image.png", "rb") as file:
       btn = st.download_button(
             label="Download image",
             data=file,
