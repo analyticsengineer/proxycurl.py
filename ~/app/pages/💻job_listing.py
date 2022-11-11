@@ -12,7 +12,7 @@ st.write("Cost: 2 credits / successful request.")
 st.write("List jobs posted by a company on LinkedIn")
 st.write("The search_id of the company on LinkedIn."
          "You can get the search_id of a LinkedIn company via"
-         "Company Profile API."
+         "Company Profile API.")
 
 api_endpoint = 'https://nubela.co/proxycurl/api/v2/linkedin/company/job'
 
