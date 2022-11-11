@@ -39,9 +39,9 @@ if st.button('Get Data'):
         with open('response.json', 'r') as f:
             data = json.load(f)
             df = pd.json_normalize(data)
-            df.to_csv('company_profile_endpoint.csv', encoding='utf-8', index=False)
+            df.to_csv('reveal_company.csv', encoding='utf-8', index=False)
             df = pd.DataFrame(df)
-            file_name = "company_profile_endpoint.csv"
+            file_name = "reveal_company.csv"
             file_path = f"./{file_name}"
             df = open(file_path, 'rb')
             st.download_button(label='Click to download',
