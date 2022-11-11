@@ -32,9 +32,9 @@ if st.button('Get Data'):
 
     st.write(response.json())
     
-    #jsonFile = open("response.json", "w")
-    #jsonFile.write(jsonString)
-    #jsonFile.close()
+    jsonFile = open("response.json", "w")
+    jsonFile.write(jsonString)
+    jsonFile.close()
 
     if st.button('Convert To Csv File'):
         with open('response.json', 'r') as f:
