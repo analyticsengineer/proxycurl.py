@@ -28,6 +28,7 @@ if st.button('Get Data'):
     response = requests.get(api_endpoint,
                         params=params,
                         headers=header_dic)
+    st.status_code()
 
     st.write(response.json())
     
