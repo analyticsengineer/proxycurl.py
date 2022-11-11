@@ -14,7 +14,7 @@ st.write("Get structured data of a Company Profile")
 api_endpoint = 'https://nubela.co/proxycurl/api/linkedin/company'
 
 api_key = st.text_input('ENTER YOUR API KEY')
-company = st.text_input('ENTER COMPANY URL')
+company = st.text_input('ENTER COMPANY LINKEDIN PAGE URL')
 
 if st.button('Get Data'):
     header_dic = {'Authorization': 'Bearer ' + api_key}
