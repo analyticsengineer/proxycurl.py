@@ -25,7 +25,7 @@ if st.button('Get Data'):
 
   st.image(response)
                           
-  try:
+try:
     with open("profile_image.png", "rb") as file:
           btn = st.download_button(
                label="Download image",
@@ -33,5 +33,5 @@ if st.button('Get Data'):
                file_name="profile_image.png",
                mime="image/png"
           )
-  except:
+except:
     pass
