@@ -24,7 +24,7 @@ if st.button('Get Data'):
                         params=params,
                         headers=header_dic)
 
-  st.write(response)
+  st.image(response)
   
   try:
     with open("profile_image.png", "rb") as file:
