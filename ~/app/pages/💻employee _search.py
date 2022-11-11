@@ -29,7 +29,7 @@ if st.button('Get Data'):
                         params=params,
                         headers=header_dic)
 
-    st.write(response.json)
+    st.write(response.json())
     
     jsonFile = open("response.json", "w")
     #jsonFile.write(jsonString)
