@@ -22,8 +22,9 @@ if st.button('Get Data'):
   }
   response = requests.get(api_endpoint,
                         params=params,
-                        headers=header_dic)
-  st.image(response)
+ 
+  image2 = Image.open(response)
+  st.image(image2)
   
   try:
     with open("profile_image.png", "rb") as file:
