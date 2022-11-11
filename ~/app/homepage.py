@@ -13,5 +13,5 @@ title_2 =  '<p style="font-family:sans-serif; color:White;">Who would like to us
 col1.markdown(title_2, unsafe_allow_html=True)
 col2.image(image)
 
-col1.write("[![Project Page](https://img.icons8.com/material-outlined/24/undefined/github.png)](https://github.com/anuoluwapods/proxycurl.py)")
+col1.write("[![Project Page](https://icons8.com/icon/E2KVOMc77Geo/github)](https://github.com/anuoluwapods/proxycurl.py)")
 
