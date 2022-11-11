@@ -25,7 +25,7 @@ if st.button('Get Data'):
 
   st.image(response)
                           
-  with open("profile_image.png", "rb") as file:
+with open("profile_image.png", "rb") as file:
           btn = st.download_button(
                label="Download image",
                data=file,
