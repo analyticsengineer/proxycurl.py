@@ -11,8 +11,8 @@ st.title("Role Lookup Endpoint")
 st.write("Cost: 3 credits / successful request.")
 st.write("Finds the closest (person) profile with a given role in a Company."
          "For example, you can use this endpoint to find the CTO of Apple. This API endpoint returns only one result that is the closest match."
-         "There is also a role search under the Employee Listing Endpoint if you require:
-         "precision on the target company
+         "There is also a role search under the Employee Listing Endpoint if you require:"
+         "precision on the target company"
          "a list of employees that matches a role (instead of one result).")
 
 api_endpoint = 'https://nubela.co/proxycurl/api/find/company/role'
