@@ -21,21 +21,3 @@ if st.button('Get Data'):
                         headers=header_dic)
 
     st.write(response.json())
-    
-    jsonFile = open("response.json", "w")
-    #jsonFile.write(jsonString)
-    jsonFile.close()
-
-    if st.button('Convert To Csv File'):
-        with open('response.json', 'r') as f:
-            data = json.load(f)
-            df = pd.json_normalize(data)
-            df.to_csv('company_profile_endpoint.csv', encoding='utf-8', index=False)
-            df = pd.DataFrame(df)
-            file_name = "company_profile_endpoint.csv"
-            file_path = f"./{file_name}"
-            df = open(file_path, 'rb')
-            st.download_button(label='Click to download',
-                      data=df,
-                      file_name=file_name,
-                      key='download_df')
