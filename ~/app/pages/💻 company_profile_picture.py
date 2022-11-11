@@ -30,5 +30,4 @@ if st.button('Get Data'):
                #label="Download image",
                #data=file,
                #file_name="profile_image.png",
-               #mime="image/png"
-               #)
+               #mime="image/png")
