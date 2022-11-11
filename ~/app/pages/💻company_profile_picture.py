@@ -25,13 +25,11 @@ if st.button('Get Data'):
 
   st.image(response)
                           
-try:
-    with open("profile_image.png", "rb") as file:
+  with open("profile_image.png", "rb") as file:
           btn = st.download_button(
                label="Download image",
                data=file,
                file_name="profile_image.png",
                mime="image/png"
-          )
-except:
-    pass
+               )
+
