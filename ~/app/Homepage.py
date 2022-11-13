@@ -3,7 +3,7 @@ import streamlit as st
 
 # setting image
 image = Image.open('image.png')
-image2 = Image.open('image_.png')
+image2 = Image.open('proxycurl.png')
 
 col1, col2 = st.columns(2)
 col1.image(image2)
