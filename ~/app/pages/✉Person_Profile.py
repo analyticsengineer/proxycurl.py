@@ -18,6 +18,7 @@ url = st.text_input('Enter user LinkedIn profile Url')
 
 
 if st.button('📥'):
+    header_dic = {'Authorization': 'Bearer ' + api_key}
     params = {
         'url': url,
         'fallback_to_cache': 'on-error',
