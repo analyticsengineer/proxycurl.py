@@ -13,7 +13,7 @@ title_2 =  '<p style="font-family:sans-serif; color:White;">Who would like to us
 col1.markdown(title_2, unsafe_allow_html=True)
 col2.image(image)
 
-col1.write("[![Project Page](https://img.icons8.com/ios-glyphs/20/ffffff/github.png)](https://github.com/anuoluwapods/proxycurl.py)") 
+col1.write("[![Project Page](https://img.icons8.com/ios-glyphs/20/ffffff/github.png)](https://github.com/anuoluwapods/proxycurl.py) Github Page") 
 col1.write("[![Instagram page](https://img.icons8.com/fluency/20/null/instagram-new.png)](https://instagram.com/anuoluwapods)")
 col1.write("[![Instagram page](https://img.icons8.com/color/20/null/twitter--v1.png)](https://twitter.com/AnuoluwapoDs)")
 col1.write("[![Instagram page](https://img.icons8.com/color/20/null/linkedin.png)](https://www.linkedin.com/in/anuoluwapo-abiodun-balogun-64b977186/)")
