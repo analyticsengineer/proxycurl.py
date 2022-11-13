@@ -13,10 +13,10 @@ st.write("Resolve LinkedIn Profile from a work email address")
 
 api_endpoint = 'https://nubela.co/proxycurl/api/linkedin/profile/resolve/email'
 
-api_key = st.text_input('ENTER YOUR API KEY')
-email = st.text_input('ENTER EMAIL ADDRESS')
+api_key = st.text_input('Enter your api key')
+email = st.text_input('Enter email address')
 
-if st.button('Get Data'):
+if st.button('📥'):
     header_dic = {'Authorization': 'Bearer ' + api_key}
     params = {
        'work_email': email,
