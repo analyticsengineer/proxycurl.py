@@ -14,4 +14,5 @@ col1.markdown(title_2, unsafe_allow_html=True)
 col2.image(image)
 
 col1.write("[![Project Page](https://img.icons8.com/material-outlined/24/undefined/github.png)](https://github.com/anuoluwapods/proxycurl.py)")
+col1.write("[![Instagram page](https://img.icons8.com/small/16/null/instagram-new.png)](https://instagram.com/anuoluwapods)")
 
