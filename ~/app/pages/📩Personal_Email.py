@@ -14,10 +14,10 @@ st.write("Given an LinkedIn profile, returns a list of personal"
 
 api_endpoint = 'https://nubela.co/proxycurl/api/contact-api/personal-email'
 
-api_key = st.text_input('ENTER YOUR API KEY')
-profile = st.text_input('ENTER LINKEDIN PROFILE PAGE URL')
+api_key = st.text_input('Enter your api key')
+profile = st.text_input('Enter profile LinkedIn page Url')
 
-if st.button('Get Data'):
+if st.button('📥'):
     header_dic = {'Authorization': 'Bearer ' + api_key}
     params = {
       'email_validation': 'include',
