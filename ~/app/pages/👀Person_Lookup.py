@@ -13,14 +13,14 @@ st.write("Resolve LinkedIn Profile")
 
 api_endpoint = 'https://nubela.co/proxycurl/api/linkedin/profile/resolve'
 
-api_key = st.text_input('ENTER YOUR API KEY')
-url = st.text_input('ENTER COMPANY URL')
-location = st.text_input('ENTER USER LOCATION')
-title = st.text_input('ENTER USER COMPANY TITLE')
-last = st.text_input('ENTER USER LAST NAME')
-first = st.text_input('ENTER USER FIRST NAME')
+api_key = st.text_input('Enter your api key')
+url = st.text_input('Enter company Url')
+location = st.text_input('Enter LinkedIn user location')
+title = st.text_input('Enter user company job title')
+last = st.text_input('Enter user last name')
+first = st.text_input('Enter user first name')
 
-if st.button('Get Data'):
+if st.button('📥'):
     header_dic = {'Authorization': 'Bearer ' + api_key}
     params = {
       'company_domain': url,
