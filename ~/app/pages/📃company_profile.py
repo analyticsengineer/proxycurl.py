@@ -38,7 +38,7 @@ if st.button('📥'):
    
 
     if st.button('📥 to csv'):
-        jsonFile = open('response.json', 'w)
+        jsonFile = open('response.json', 'w')
         jsonFile.close()
         with open('response.json', 'r') as f:
             data = json.load(f)
