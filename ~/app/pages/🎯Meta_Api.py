@@ -13,9 +13,9 @@ st.write("Get your current credit(s) balance")
 
 api_endpoint = 'https://nubela.co/proxycurl/api/credit-balance'
 
-api_key = st.text_input('ENTER YOUR API KEY')
+api_key = st.text_input('Enter you api key')
 
-if st.button('Get Data'):
+if st.button('📥'):
     header_dic = {'Authorization': 'Bearer ' + api_key}
     response = requests.get(api_endpoint,
                         headers=header_dic)
