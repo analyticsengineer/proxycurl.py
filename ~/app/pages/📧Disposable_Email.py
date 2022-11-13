@@ -13,10 +13,10 @@ st.write("Given an email address, checks if the email address belongs to a dispo
 
 api_endpoint = 'https://nubela.co/proxycurl/api/disposable-email'
 
-api_key = st.text_input('ENTER YOUR API KEY')
-email = st.text_input('ENTER EMAIL ADDRESS')
+api_key = st.text_input('Enter your api key')
+email = st.text_input('Enter email address')
 
-if st.button('Get Data'):
+if st.button('📥'):
   header_dic = {'Authorization': 'Bearer ' + api_key}
   params = {
     'email': email,
