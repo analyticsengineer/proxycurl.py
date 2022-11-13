@@ -38,14 +38,14 @@ if st.button('📥'):
    
 
     if st.button('📥 to csv'):
-        jsonFile = open("response.json", "w")
+        jsonFile = open('response.json', 'w)
         jsonFile.close()
         with open('response.json', 'r') as f:
             data = json.load(f)
             df = pd.json_normalize(data)
             df.to_csv('company_profile_endpoint.csv', encoding='utf-8', index=False)
             df = pd.DataFrame(df)
-            file_name = "company_profile_endpoint.csv"
+            file_name = 'company_profile_endpoint.csv'
             file_path = f"./{file_name}"
             df = open(file_path, 'rb')
             st.download_button(label='Click to download',
