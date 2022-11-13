@@ -14,11 +14,11 @@ st.write("Get structured data of a LinkedIn Job Profile")
 
 api_endpoint = 'https://nubela.co/proxycurl/api/linkedin/job'
 
-api_key = st.text_input('ENTER YOUR API KEY')
-job = st.text_input('ENTER LINKEDIN JOB POST URL')
+api_key = st.text_input('Enter your api key')
+job = st.text_input('Enter job post LinkedIn Url')
 
 
-if st.button('Get Data'):
+if st.button('📥'):
     header_dic = {'Authorization': 'Bearer ' + api_key}
     params = {
         'url': job,
