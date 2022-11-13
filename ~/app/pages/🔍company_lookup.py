@@ -14,9 +14,9 @@ st.write("Resolve Company LinkedIn Profile from company name, domain name and lo
 api_endpoint = 'https://nubela.co/proxycurl/api/linkedin/company/resolve'
 
 api_key = st.text_input('Enter your api key')
-company = st.text_input('ENTER COMPANY URL')
-name =  st.text_input('ENTER COMPANY NAME')
-location =  st.text_input('ENTER COMPANY LOCATION')
+company = st.text_input('Enter company url')
+name =  st.text_input('Enter company name')
+location =  st.text_input('Enter company location')
 
 if st.button('📥'):
     header_dic = {'Authorization': 'Bearer ' + api_key}
