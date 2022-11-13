@@ -15,10 +15,10 @@ st.write("Email addresses returned are verified to not be role-based or catch-al
 
 api_endpoint = 'https://nubela.co/proxycurl/api/linkedin/profile/email'
 
-api_key = st.text_input('ENTER YOUR API KEY')
-profile = st.text_input('ENTER YOUR LINKEDIN PROFILE URL')
+api_key = st.text_input('Enter your api key')
+profile = st.text_input('Enter your LinkedIn profile Url')
 
-if st.button('Get Data'):
+if st.button('📥'):
     header_dic = {'Authorization': 'Bearer ' + api_key}
     params = {
       'linkedin_profile_url': profile,
