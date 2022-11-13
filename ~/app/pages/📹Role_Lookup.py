@@ -17,12 +17,12 @@ st.write("Finds the closest (person) profile with a given role in a Company."
 
 api_endpoint = 'https://nubela.co/proxycurl/api/find/company/role'
 
-api_key = st.text_input('ENTER YOUR API KEY')
-role = st.text_input('ENTER USER ROLE IN COMPANY')
-name = st.text_input('ENTER COMPANY NAME')
+api_key = st.text_input('Enter your api key')
+role = st.text_input('Enter user role in company')
+name = st.text_input('Enter company name')
 
 
-if st.button('Get Data'):
+if st.button('📥'):
     header_dic = {'Authorization': 'Bearer ' + api_key}
     params = {
       'role': role,
