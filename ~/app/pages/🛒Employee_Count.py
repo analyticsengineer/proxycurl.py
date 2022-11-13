@@ -14,10 +14,10 @@ st.write("Get an employee count of this company from various sources.")
 
 api_endpoint = 'https://nubela.co/proxycurl/api/linkedin/company/employees/count/'
 
-api_key = st.text_input('ENTER YOUR API KEY')
-company = st.text_input('ENTER LINKEDIN COMPANY URL')
+api_key = st.text_input('ENTER your api key')
+company = st.text_input('Enter company LinkedIn Url')
 
-if st.button('Get Data'):
+if st.button('📥'):
     header_dic = {'Authorization': 'Bearer ' + api_key}
     params = {
         'linkedin_employee_count': 'include',
