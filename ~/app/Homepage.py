@@ -3,8 +3,10 @@ import streamlit as st
 
 # setting image
 image = Image.open('image.png')
+image2 = Image.open('image_.png')
 
 col1, col2 = st.columns(2)
+col1.image(image2)
 
 col1.header("Proxy Curl - Linkedin API")
 title_1 =  '<p style="font-family:sans-serif; color:White;">This Web App is built for Non programmers</p>'
