@@ -13,10 +13,10 @@ st.write("Search employees of a target by their job title")
 
 api_endpoint = 'https://nubela.co/proxycurl/api/linkedin/company/employee/search/'
 
-api_key = st.text_input('ENTER YOUR API KEY')
-company = st.text_input('ENTER LINKEDIN COMPANY URL')
+api_key = st.text_input('Enter your api key')
+company = st.text_input('Enter company LinkedIn Url')
 
-if st.button('Get Data'):
+if st.button('📥'):
     api_key = 'YOUR_API_KEY'
     header_dic = {'Authorization': 'Bearer ' + api_key}
     params = {
