@@ -14,8 +14,8 @@ col1.markdown(title_2, unsafe_allow_html=True)
 col2.image(image)
 
 col1.write("[![Project Page](https://img.icons8.com/ios-glyphs/20/ffffff/github.png)](https://github.com/anuoluwapods/proxycurl.py) Github Page") 
-col1.write("[![Instagram page](https://img.icons8.com/fluency/20/null/instagram-new.png)](https://instagram.com/anuoluwapods)")
-col1.write("[![Instagram page](https://img.icons8.com/color/20/null/twitter--v1.png)](https://twitter.com/AnuoluwapoDs)")
-col1.write("[![Instagram page](https://img.icons8.com/color/20/null/linkedin.png)](https://www.linkedin.com/in/anuoluwapo-abiodun-balogun-64b977186/)")
-col1.write("[![Instagram page](https://img.icons8.com/fluency/20/null/facebook-new.png)](https://facebook.com/ifeoluwapo.balogun)")
+col1.write("[![Instagram page](https://img.icons8.com/fluency/20/null/instagram-new.png)](https://instagram.com/anuoluwapods) Instagram page")
+col1.write("[![Instagram page](https://img.icons8.com/color/20/null/twitter--v1.png)](https://twitter.com/AnuoluwapoDs) Twitter Page")
+col1.write("[![Instagram page](https://img.icons8.com/color/20/null/linkedin.png)](https://www.linkedin.com/in/anuoluwapo-abiodun-balogun-64b977186/) Linkedin Page")
+col1.write("[![Instagram page](https://img.icons8.com/fluency/20/null/facebook-new.png)](https://facebook.com/ifeoluwapo.balogun) Facebook Page")
 
