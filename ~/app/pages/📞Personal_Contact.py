@@ -13,11 +13,11 @@ st.write("Given an LinkedIn profile, returns a list of personal contact numbers 
 
 api_endpoint = 'https://nubela.co/proxycurl/api/contact-api/personal-contact'
 
-api_key = st.text_input('ENTER YOUR API KEY')
-personal = st.text_input('ENTER LINKEDIN PERSONAL PAGE URL')
+api_key = st.text_input('Enter your api key')
+personal = st.text_input('Enter personal LinkedIn page Url')
 
 
-if st.button('Get Data'):
+if st.button('📥'):
     header_dic = {'Authorization': 'Bearer ' + api_key}
     params = {
        'linkedin_profile_url': personal,
