@@ -2,7 +2,7 @@ from PIL import Image
 import streamlit as st
 
 # setting image
-image = Image.open('image.png', width = 400)
+image = Image.open('image.png')
 
 col1, col2 = st.columns(2)
 
