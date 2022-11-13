@@ -13,10 +13,10 @@ st.write("Get structured data of a LinkedIn School Profile")
 
 api_endpoint = 'https://nubela.co/proxycurl/api/linkedin/school'
 
-api_key = st.text_input('ENTER YOUR API KEY')
-url = st.text_input('ENTER SCHOOL LINKEDIN PROFILE URL')
+api_key = st.text_input('Enter your api key')
+url = st.text_input('Enter school LinkedIn profile Url')
 
-if st.button('Get Data'):
+if st.button('📥'):
     header_dic = {'Authorization': 'Bearer ' + api_key}
     params = {
        'url': url,
@@ -28,17 +28,15 @@ if st.button('Get Data'):
 
     st.write(response.json())
     
-    jsonFile = open("response.json", "w")
-    #jsonFile.write(jsonString)
-    jsonFile.close()
-
-    if st.button('Convert To Csv File'):
+    if st.button('📥 to csv'):
+        jsonFile = open('response.json', 'w')
+        jsonFile.close()
         with open('response.json', 'r') as f:
             data = json.load(f)
             df = pd.json_normalize(data)
-            df.to_csv('school_profile.csv', encoding='utf-8', index=False)
+            df.to_csv('company_profile_endpoint.csv', encoding='utf-8', index=False)
             df = pd.DataFrame(df)
-            file_name = "school_profile.csv"
+            file_name = 'company_profile_endpoint.csv'
             file_path = f"./{file_name}"
             df = open(file_path, 'rb')
             st.download_button(label='Click to download',
