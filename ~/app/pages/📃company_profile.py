@@ -34,11 +34,12 @@ if st.button('📥'):
 
     st.write(response.json())
     
-    jsonFile = open("response.json", "w")
-    #jsonFile.write(jsonString)
-    jsonFile.close()
+   
+   
 
-    if st.button('Convert To Csv File'):
+    if st.button('📥 to csv'):
+        jsonFile = open("response.json", "w")
+        jsonFile.close()
         with open('response.json', 'r') as f:
             data = json.load(f)
             df = pd.json_normalize(data)
