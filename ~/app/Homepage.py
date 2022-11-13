@@ -6,6 +6,7 @@ image = Image.open('image.png')
 image2 = Image.open('proxycurl.png')
 
 col1, col2 = st.columns(2)
+col1.image(image2)
 
 
 col1.header("Proxy Curl - Linkedin API")
@@ -21,5 +22,5 @@ col1.write("[![Instagram page](https://img.icons8.com/fluency/20/null/instagram-
 col1.write("[![Instagram page](https://img.icons8.com/color/20/null/twitter--v1.png)](https://twitter.com/AnuoluwapoDs) Twitter Page")
 col1.write("[![Instagram page](https://img.icons8.com/color/20/null/linkedin.png)](https://www.linkedin.com/in/anuoluwapo-abiodun-balogun-64b977186/) Linkedin Page")
 col1.write("[![Instagram page](https://img.icons8.com/fluency/20/null/facebook-new.png)](https://facebook.com/ifeoluwapo.balogun) Facebook Page")
-col1.image(image2)
+
 
