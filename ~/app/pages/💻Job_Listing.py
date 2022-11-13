@@ -3,7 +3,7 @@ import streamlit as st
 from PIL import Image
 import json
 
-image = Image.open('image2.png')
+image = Image.open('proxycurl.png')
 st.image(image)
 
 st.title("Jobs Listing Endpoint")
