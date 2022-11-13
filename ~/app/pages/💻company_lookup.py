@@ -18,7 +18,7 @@ company = st.text_input('ENTER COMPANY URL')
 name =  st.text_input('ENTER COMPANY NAME')
 location =  st.text_input('ENTER COMPANY LOCATION')
 
-if st.button('📥 Get data '):
+if st.button('📥'):
     header_dic = {'Authorization': 'Bearer ' + api_key}
     params = {
        'company_location': location,
