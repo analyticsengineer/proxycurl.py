@@ -35,7 +35,8 @@ if st.button('📥'):
     response = requests.get(api_endpoint,
                         params=params,
                         headers=header_dic)
-    st.write(response.json())
+    respond = st.write(response.json())
+    st.write(respond)
     
     if st.button('📥 to csv'):
         jsonFile = open('response.json', 'w')
