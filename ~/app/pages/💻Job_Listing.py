@@ -45,5 +45,4 @@ if st.button('📥'):
                       data=df,
                       file_name=file_name,
                       key='download_df')
-                      file_name=file_name,
-                      key='download_df')
+                      
