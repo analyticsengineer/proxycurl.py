@@ -39,12 +39,10 @@ if st.button('📥'):
     st.write(respond)
     
     if st.button('📥 to csv'):
-        jsonFile = open('response.json', 'w')
-        jsonFile.close()
-        with open('response.json', 'r') as f:
-            data = json.load(f)
-            df = pd.json_normalize(data)
-            df.to_csv('company_profile_endpoint.csv', encoding='utf-8', index=False)
+        with open("personprofile.json", "w") as outfile:
+            json.dump(respond, outfile)
+            df = pd.read_json (r'personprofile.json')
+            df.to_csv (r'personprofile.csv', encoding='utf-8', index=False)
             df = pd.DataFrame(df)
             file_name = 'company_profile_endpoint.csv'
             file_path = f"./{file_name}"
