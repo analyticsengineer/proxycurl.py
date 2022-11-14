@@ -29,20 +29,21 @@ if st.button('📥'):
                         params=params,
                         headers=header_dic)
 
-    st.write(response.json())
+    respond = st.write(response.json())
+    st.write(respond)
     
     if st.button('📥 to csv'):
-        jsonFile = open('response.json', 'w')
-        jsonFile.close()
-        with open('response.json', 'r') as f:
-            data = json.load(f)
-            df = pd.json_normalize(data)
-            df.to_csv('company_profile_endpoint.csv', encoding='utf-8', index=False)
+        with open('joblisting.json', 'w') as outfile:
+            json.dump(respond, outfile)
+            df = pd.read_json ('joblisting.json')
+            df.to_csv ('joblisting.csv', encoding='utf-8', index=False)
             df = pd.DataFrame(df)
-            file_name = 'company_profile_endpoint.csv'
+            file_name = 'joblisting.csv'
             file_path = f"./{file_name}"
             df = open(file_path, 'rb')
             st.download_button(label='Click to download',
                       data=df,
+                      file_name=file_name,
+                      key='download_df')
                       file_name=file_name,
                       key='download_df')
