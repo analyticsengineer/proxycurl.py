@@ -2,7 +2,7 @@ from PIL import Image
 import streamlit as st
 
 # App title for SEO Optimization
-st.set_page_config(page_title="Proxycurl API")
+st.set_page_config(page_title="Proxycurl")
 
 # setting image
 image = Image.open('image.png')
