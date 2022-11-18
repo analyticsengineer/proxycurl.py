@@ -1,6 +1,7 @@
 import requests
 import streamlit as st
 from PIL import Image
+import re
 import json
 
 image = Image.open('proxycurl.png')
@@ -15,14 +16,18 @@ api_endpoint = 'https://nubela.co/proxycurl/api/linkedin/company/employee/search
 
 api_key = st.text_input('Enter your api key')
 company = st.text_input('Enter company LinkedIn Url')
+page_size = st.number_input('Enter page size')
+title = st.text_input('Enter the employee title you want to serch for(ceo, software engineer)')
+
+word = re.findall("\D", title)
 
 if st.button('📥'):
     api_key = 'YOUR_API_KEY'
     header_dic = {'Authorization': 'Bearer ' + api_key}
     params = {
-       'page_size': '1000',
+       'page_size': page_size,
        'linkedin_company_profile_url': company,
-       'keyword_regex': '[Cc][Ee][Oo]',
+       'keyword_regex': word,
     }
     response = requests.get(api_endpoint,
                         params=params,
