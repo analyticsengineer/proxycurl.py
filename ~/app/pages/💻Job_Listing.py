@@ -33,7 +33,7 @@ if st.button('📥'):
     st.write(respond)
 
     if st.button('📥 view keys'):
-                  key = respond.key()
+                  key = respond.keys()
                   st.write(key)
     
     if st.button('📥 to csv'):
