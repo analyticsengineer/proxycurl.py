@@ -32,14 +32,12 @@ if st.button('📥'):
     respond = st.write(response.json())
     st.write(respond)
 
-    if st.button('📥 view keys'):
-                  key = respond.keys()
-                  st.write(key)
     
     if st.button('📥 to csv'):
-        with open('joblisting.json', 'w') as outfile:
-            json.dump(respond, outfile)
-            df = pd.read_json ('joblisting.json')
+         df = pd.DataFrame(respond['jobs'])
+       # with open('joblisting.json', 'w') as outfile:
+            #json.dump(respond, outfile)
+            #df = pd.read_json ('joblisting.json')
             df.to_csv ('joblisting.csv', encoding='utf-8', index=False)
             df = pd.DataFrame(df)
             file_name = 'joblisting.csv'
