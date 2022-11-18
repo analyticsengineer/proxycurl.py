@@ -31,6 +31,10 @@ if st.button('📥'):
 
     respond = st.write(response.json())
     st.write(respond)
+
+    if st.button('📥 view keys'):
+                  key = respond.key()
+                  st.write(key)
     
     if st.button('📥 to csv'):
         with open('joblisting.json', 'w') as outfile:
