@@ -16,12 +16,13 @@ api_endpoint = 'https://nubela.co/proxycurl/api/linkedin/company/employees/count
 
 api_key = st.text_input('Enter your api key')
 company = st.text_input('Enter company LinkedIn Url')
+status = st.text_input('Enter employee status(current, past)')
 
 if st.button('📥'):
     header_dic = {'Authorization': 'Bearer ' + api_key}
     params = {
         'linkedin_employee_count': 'include',
-        'employment_status': 'current',
+        'employment_status': status,
         'url': company,
     }
     response = requests.get(api_endpoint,
