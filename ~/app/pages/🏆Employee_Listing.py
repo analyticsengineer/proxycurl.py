@@ -17,14 +17,19 @@ api_endpoint = 'https://nubela.co/proxycurl/api/linkedin/company/employees/'
 
 api_key = st.text_input('Enter your api key')
 company = st.text_input('Enter company LinkIn Url')
+status_2 = st.text_input('Enter employee status(current, past)')
+page_size1 = st.number_input('Enter page size')
+role_search1 = st.text_input('Enter employee company role(founder, ceo)')
+
+role1 = re.findall("\D", role_search1)
 
 if st.button('📥'):
     header_dic = {'Authorization': 'Bearer ' + api_key}
     params = {
         'enrich_profiles': 'enrich',
-        'role_search': '[Ff][Oo][Uu][Nn][Dd][Ee][Rr]',
-        'page_size': '100',
-        'employment_status': 'current',
+        'role_search': role1,
+        'page_size': page_size1,
+        'employment_status': status_2,
         'resolve_numeric_id': 'false',
         'url': company,
     }
@@ -36,9 +41,7 @@ if st.button('📥'):
     st.write(respond)
     
     if st.button('📥 to csv'):
-        with open('employeelisting.json', 'w') as outfile:
-            json.dump(respond, outfile)
-            df = pd.read_json ('employeelisting.json')
+            df = pd.DataFrame(respond['employees'])
             df.to_csv ('employeelisting.csv', encoding='utf-8', index=False)
             df = pd.DataFrame(df)
             file_name = 'employeelisting.csv'
