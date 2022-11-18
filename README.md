@@ -9,7 +9,7 @@
 
 ### Use the api code to extract your linkedin data using this web app
 
-[Link To Web App](https://proxycurl-api.streamlit.app/)
+[Link To Web App](https://proxycurl.streamlit.app/)
 
 [Proxycurl Website](https://nubela.co)
 
